@@ -5,6 +5,8 @@ export interface IBlogPost {
   createdAt: number;
   updatedAt: number;
   author: IAuthor;
+  tags?: string[];
+  __resourcePath: string;
 }
 
 export interface IAuthor {

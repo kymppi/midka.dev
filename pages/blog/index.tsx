@@ -1,24 +1,16 @@
-import Link from 'next/link';
-import Image from 'next/image';
-
+import BlogListItem from '../../components/BlogListItem';
+import { IBlogPost } from '../../utils/types';
 import { frontMatter as mdxFtw } from './hello-world.mdx';
 import { frontMatter as howtomakedcbot } from './how-to-make-a-discord-bot.mdx';
-import { formatPath } from '../../utils/functions';
+import { frontMatter as third } from './third.mdx';
 
-const posts = [mdxFtw, howtomakedcbot];
+const posts: IBlogPost[] = [mdxFtw, howtomakedcbot, third, mdxFtw];
 
 const BlogIndex = () => (
   <>
-    <h1 className="font-bold text-blue-500 text-4xl text-center my-4">Blog</h1>
-    <div className="my-4 py-2 grid grid-cols-1">
+    <div className="flex flex-row mt-8">
       {posts.map((post) => (
-        <div key={post.__resourcePath}>
-          <div>
-            <Link href={formatPath(post.__resourcePath)}>{post.title}</Link>
-          </div>
-          <div>{new Date(post.updatedAt).toString()}</div>
-          <div>{post.snippet}</div>
-        </div>
+        <BlogListItem key={post.__resourcePath} {...post} />
       ))}
     </div>
   </>
