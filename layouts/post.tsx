@@ -1,16 +1,9 @@
-import { NextSeo } from "next-seo";
-import { FeaturedImage } from "../components/images/FeaturedImage";
-
-interface FrontMatter {
-  title: string;
-  snippet: string;
-  image: string;
-  createdAt: number;
-  updatedAt: number;
-}
+import { NextSeo } from 'next-seo';
+import { FeaturedImage } from '../components/images/FeaturedImage';
+import { IBlogPost } from '../utils/types';
 
 interface Props {
-  frontMatter: FrontMatter;
+  frontMatter: IBlogPost;
   children: JSX.Element;
 }
 

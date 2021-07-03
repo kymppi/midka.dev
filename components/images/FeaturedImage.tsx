@@ -1,4 +1,5 @@
-import { NextSeo } from "next-seo";
+import Image from 'next/image';
+import { NextSeo } from 'next-seo';
 
 type Props = {
   imageUri: string;
@@ -18,20 +19,19 @@ export const FeaturedImage = ({ imageUri, title }: Props) => {
               alt: `Featured image for ${title}`,
             },
           ],
-          site_name: "Midka.Dev",
+          site_name: 'Midka.Dev',
         }}
         twitter={{
-          handle: "@aTwitterHandle",
-          cardType: "summary_large_image",
+          handle: '@aTwitterHandle',
+          cardType: 'summary_large_image',
         }}
       />
-      <img src={imageUri} />
     </>
   ) : null;
 };
 
 function getImageUri(title: string) {
   const titleForFetching =
-    "images/" + title.replaceAll(" ", "-").toLowerCase() + ".jpg";
+    'images/' + title.replaceAll(' ', '-').toLowerCase() + '.jpg';
   return titleForFetching;
 }
