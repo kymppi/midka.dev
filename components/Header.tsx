@@ -2,23 +2,32 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <div>
+    <header>
+      <h1 className="text-6xl font-bold text-center my-8">Midka.DEV</h1>
       <nav>
-        <ul>
+        <ul className="flex flex-row justify-center my-4 space-x-4">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" passHref>
+              <a className="">Home</a>
+            </Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about">
+              <a className="">About</a>
+            </Link>
           </li>
           <li>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects">
+              <a className="">Projects</a>
+            </Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog">
+              <a className="">Blog</a>
+            </Link>
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
