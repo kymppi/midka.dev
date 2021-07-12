@@ -1,16 +1,15 @@
 import { IBlogPost } from '../utils/types';
 import Image from 'next/image';
 import Link from 'next/link';
-import { formatPath } from '../utils/functions';
 
 export default function BlogListItem({
-  __resourcePath,
   title,
   updatedAt,
   snippet,
   image,
   author,
   tags,
+  slug,
 }: IBlogPost) {
   return (
     <div className="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
@@ -24,7 +23,7 @@ export default function BlogListItem({
           />
         </div>
         <div className="p-4 h-auto md:h-40 lg:h-48">
-          <Link href={formatPath(__resourcePath)}>
+          <Link href={`blog/${slug}`}>
             <a className="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
               {title}
             </a>

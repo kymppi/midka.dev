@@ -1,15 +1,17 @@
 export interface IBlogPost {
+  slug: string;
   title: string;
   snippet: string;
   image: string;
-  createdAt: number;
-  updatedAt: number;
+  createdAt: string;
+  updatedAt: string;
   author: IAuthor;
   tags?: string[];
-  __resourcePath: string;
 }
 
 export interface IAuthor {
   name: string;
   email: string;
 }
+
+export type IArticleType = 'blog';

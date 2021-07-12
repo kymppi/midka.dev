@@ -1,19 +1,22 @@
 import BlogListItem from '../../components/BlogListItem';
+import { getFiles, getFilesWithFrontMatter } from '../../lib/mdx';
 import { IBlogPost } from '../../utils/types';
-import { frontMatter as mdxFtw } from './hello-world.mdx';
-import { frontMatter as howtomakedcbot } from './how-to-make-a-discord-bot.mdx';
-import { frontMatter as third } from './third.mdx';
 
-const posts: IBlogPost[] = [mdxFtw, howtomakedcbot, third, mdxFtw];
-
-const BlogIndex = () => (
+const BlogIndex = ({ posts }: { posts: IBlogPost[] }) => (
   <>
     <div className="flex flex-row mt-8">
       {posts.map((post) => (
-        <BlogListItem key={post.__resourcePath} {...post} />
+        <BlogListItem key={post.slug} {...post} />
       ))}
     </div>
   </>
 );
+
+export async function getStaticProps() {
+  let posts = await getFilesWithFrontMatter('blog');
+  // TODO: Fetch blog posts
+
+  return { props: { posts } };
+}
 
 export default BlogIndex;
