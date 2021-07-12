@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="mx-auto w-9/12">
+    <div className="">
       <Header />
       <Component {...pageProps} />
     </div>

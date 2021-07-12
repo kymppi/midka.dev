@@ -10,7 +10,7 @@ const MDXComponents = {
   h4: (props: any) => <Heading className="text-base" {...props} />,
   h5: (props: any) => <Heading className="text-sm" {...props} />,
   h6: (props: any) => <Heading className="text-xs" {...props} />,
-  Demonstration: Demonstration,
+  Demonstration,
 };
 
 export default MDXComponents;

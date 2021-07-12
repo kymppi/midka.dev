@@ -14,7 +14,6 @@ const BlogIndex = ({ posts }: { posts: IBlogPost[] }) => (
 
 export async function getStaticProps() {
   let posts = await getFilesWithFrontMatter('blog');
-  // TODO: Fetch blog posts
 
   return { props: { posts } };
 }
