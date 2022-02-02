@@ -13,15 +13,14 @@ const Home: NextPage = () => {
       />
       <div className="z-10 fixed p-6 m-6 shadow-lg h-full w-full rounded-3xl flex justify-center items-center">
         <div className="grid gap-6 grid-cols-3 grid-rows-3 m-6 h-full w-full">
-          <Card>1</Card>
-          <Card>2</Card>
-          <Card>3</Card>
-          <Card>4</Card>
-          <Card>5</Card>
-          <Card>6</Card>
-          <Card>7</Card>
-          <Card>8</Card>
-          <Card>9</Card>
+          <Card className="row-span-3 text-white">
+            Basic Info & Social Media Icons
+          </Card>
+          <Card className="text-white col-span-2">My Photography</Card>
+          <Card className="text-white">View latest posts</Card>
+          <Card className="text-white">Url Shorteter</Card>
+          <Card className="text-white">???</Card>
+          <Card className="text-white">Site Info</Card>
         </div>
       </div>
     </div>
