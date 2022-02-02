@@ -7,7 +7,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ children, className }) => {
   return (
     <div
-      className={`container drop-shadow-2xl bg-gray-800 p-5 rounded-xl bg-opacity-100 backdrop-filter backdrop-blur-lg flex items-center justify-center ${className}`}
+      className={`container drop-shadow-2xl bg-gray-600 backdrop-blur-xl opacity-90 p-5 rounded-xl bg-opacity-100 backdrop-filter flex items-center justify-center ${className}`}
     >
       {children}
     </div>
