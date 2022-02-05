@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import BackgroundImage from '../components/BackgroundImage';
 import Card from '../components/Card';
+import ProfileInfoCard from '../components/ProfileInfoCard';
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +14,13 @@ const Home: NextPage = () => {
       />
       <div className="z-10 fixed p-6 m-6 shadow-lg h-full w-full rounded-3xl flex justify-center items-center">
         <div className="grid gap-6 grid-cols-3 grid-rows-3 m-6 h-full w-full">
-          <Card className="row-span-3 text-white">
+          <ProfileInfoCard
+            name="Midka"
+            photoUri="https://images.unsplash.com/photo-1457269449834-928af64c684d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            className="row-span-3 text-white"
+          >
             Basic Info & Social Media Icons
-          </Card>
+          </ProfileInfoCard>
           <Card className="text-white col-span-2">My Photography</Card>
           <Card className="text-white">View latest posts</Card>
           <Card className="text-white">Url Shorteter</Card>

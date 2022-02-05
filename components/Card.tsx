@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-interface CardProps {
+export interface CardProps {
   className?: string;
 }
 
